@@ -1,14 +1,9 @@
-const width = 1000;
-const height = 600;
-const margin = {top : 20, bottom : 20, right : 0, left : 20};
-
-
-// Créer l'élément SVG et le configurer
-const svg = d3.select('body')
+const svg = d3
+.select('body')
 .append('svg')
-.attr('width', width)
-.attr('height', height)
-.attr('style', 'font: 20px Helvetica');
+.attr('width', 2000)
+.attr('height', 1000);
+
 
 // Ajout de l'élément burger svg
 const bur = svg.append('g')
@@ -24,14 +19,24 @@ const bur = svg.append('g')
 
 
 var burger = document.querySelector('#burger');
+
+burger.style.left = 300 + "px";
+burger.style.top = 200 + "px";
 setTimeout(function() {
-	burger.style.transform = 'scale(10)';
+    burger.style.transform = 'scale(10)';
 }, 200);
 
 
-//function animate() {
-  //bur.transition()
-    //        .duration(1000)
-      //      .attr('y', (d)=>{return 1.2*d.y})
-        //    .on('end', animate)
-    //}
+const projection = d3.geoNaturalEarth1().scale(250);
+const pathGenerator = d3.geoPath().projection(projection);
+
+d3.json('./map.json').then(function (data) {
+    const features = data.features;
+    console.log(features)
+    const paths = svg
+    .selectAll('path')
+    .data(features)
+    .enter()
+    .append('path')
+    .attr('d', (d) => pathGenerator(d));
+});
