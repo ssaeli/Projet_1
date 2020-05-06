@@ -99,13 +99,7 @@ const burgerGroup = svg.append('g')
 
 
 function drawBurger(pos) {
-   
-    burgerGroup.selectAll('text')
-  .data(year2000)
-  .enter()
-  .append('text')
-    .text('🍔')
-    .style('font-size', d => d.size + "px")
+
 
     burgerGroup
     .append('text')
