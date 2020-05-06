@@ -1,5 +1,6 @@
 
-const countries = {
+const countries = 
+    {
     'Argentina': [390, 515],
     'Australia':[1134, 460],
     'Brazil':[438, 399],
