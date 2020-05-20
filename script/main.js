@@ -118,14 +118,14 @@ d3.dsv(";", "data/dati.csv", function (d) {
         .data(data)
         .enter()
         .append('text')
-        .attr('x', (d) => d.coord[0]-10)
-        .attr('y', (d) => d.coord[1]+30)
+        .attr('x', (d) => d.coord[0])
+        .attr('y', (d) => d.coord[1]+10)
         .text((d) => d.how)
         .style('fill', 'white')
-        .style('font-size', '18px')
+        .style('font-size', '15px')
         .style('font-weight', 'bold')
-        .style('stroke', '  #873600  ')
-        .style('stroke-width', '0.5px');
+        .style('stroke', 'black')
+        .style('stroke-width', '0.8px');
         
     }; 
     
@@ -163,6 +163,6 @@ svg.on('click', function() {
         .append('path')
         .attr('class', 'country')
         .attr('d', (d) => pathGenerator(d))
-        .style('fill', ' #f5cba7 ');
+        .style('fill', ' #fadbd8 ');
         
     };
