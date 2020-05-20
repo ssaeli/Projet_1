@@ -15,7 +15,7 @@ Lien vers page GitHub des codes: https://github.com/ssaeli/Projet_1
 
 Une première visualisation de la carte géographique avant que l'utilisateur puisse choisir une année à travers la liste déroulante:
 
-![alt text](/data/img_readme/img_1.PNG "Page d'acceuil")
+![alt text](/data/img_readme/img_1.PNG)
 
 ## Variables retenues
 Les variables telle que le PIB par habitant et le Big Mac Index de différents pays ont été pris en compte.
@@ -29,7 +29,7 @@ Le PIB (Produit Intérieur Brut) par habitant (en US$) est l'indicateur économi
 
 L'idée est de faire intéragir l'utilisateur, grâce à une liste déroulnate par rapport aux années (entre 2000 et 2018). Un choix qui permet donc à la page d'être intéressante et de pouvoir revenir sur une donnée ou plusieurs. Par exemple, l'utilisateur peut choisir l'année 2018 et ensuite aller sur le 2017 ou autre en cliquant sur le ménu déroulante. Comme on peut le voir dans l'image suivante : 
 
-![alt text](/data/img_readme/img_2.PNG "Intéraction utilisateur")
+![alt text](/data/img_readme/img_2.PNG)
 
 Pour montrer l'évolution de la richesse (d'une façon dynamique) de différentes nations j'ai choisi de diviser le PIB par habitant d'une nation par le Big Mac Index de celle-ci, ainsi on obtient la quantité de sandwich qu'on peut acheter avec cette somme d'argent par année.
 
@@ -43,7 +43,7 @@ Ensuite, j'ai voulu montrer l'évolution du pouvoir d'achat en ajoutant un élé
 
 L'image represente une partie de la carte pour l'année 2004 en se focalisant sur l'Amérique du Nord et du Sud:
 
-![alt text](/data/img_readme/img_3.PNG "Focalisation taille")
+![alt text](/data/img_readme/img_3.PNG)
 
 On voit en effet qu'au Canada, avec le PIB par habitant et le Big Mac Index de la période en question, les citoyens pouvaient acheter 13'757 Big Mac. Au Brezil, par contre, on pouvait acheter que 2'142 Big Mac. 
 En conclusion, on peut affirmer, grâce à cette representation, que le Canada est plus riche du Brazil en 2004 selon cette comparasion faite au travers le Big Mac Index.
