@@ -31,7 +31,8 @@ J'ai choisi de prendre en compte les données depuis le 2000 jusqu'au 2018 pour 
 
 # Lien vers la page GitHub de la visualisation
 
-
+Lien vers la page web de la visualisation : http://127.0.0.1:5500/index.html
+Lien vers page GitHub des codes: https://github.com/ssaeli/Projet_1
 
 # Explicitation des choix graphiques
 
