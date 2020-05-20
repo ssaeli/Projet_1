@@ -44,7 +44,7 @@ Ensuite, j'ai voulu montrer l'évolution du pouvoir d'achat en ajoutant un élé
 L'image represente une partie de la carte pour l'année 2004 en se focalisant sur l'Amérique du Nord et du Sud 
 :
 
-![alt text](/data/img_readme/img_3.png "Focalisation taille")
+![alt text](/data/img_readme/img_3.png "Focalisation taille burgers")
 
 On voit en effet qu'au Canada, avec le PIB par habitant et le Big Mac Index de la période en question, les citoyens pouvaient acheter 13'757 Big Mac. Au Brezil, par contre, on pouvait acheter que 2'142 Big Mac. 
 En conclusion, on peut affirmer, grâce à cette representation, que le Canada est plus riche du Brazil en 2004 selon cette comparasion faite au travers le Big Mac Index.
