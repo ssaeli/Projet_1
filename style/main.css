@@ -1,4 +1,53 @@
 body {
-    margin : 1em;
+    margin : 4em;
     font-family: 'Helvetica Neue';
+    background-color: black;
+    color: white;
+}
+
+h2{
+    margin-bottom: 40px;
+}
+
+#container{
+box-sizing: border-box;
+min-height: 5px;
+font-size: 18px;
+text-align: center;
+}
+
+
+.left-col{
+    width: 15%;
+    float:left;
+    margin-left: 30%;
+} 
+
+.right-col{
+    width:20%;
+    float:left;
+}
+
+.center-col{
+    width:15%;
+    float:left;
+   ;
+
+}
+
+#columns {
+    columns:3;
+    width: 45%;
+    margin-left: 30%;
+}
+
+h3{
+    color: lightpink;
+    margin-top: 0px;
+    text-align: center;
+    
+}
+
+#legende {
+display: inline;
 }
