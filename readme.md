@@ -13,7 +13,7 @@ Lien vers page GitHub des codes: https://github.com/ssaeli/Projet_1
  *Attention* : l'ouverture du projet à travers le browser Firefox ne permet pas de visualiser les éléments correctement.
  Pour une visualisation correcte il sera bien de ovurir le projet avec Google Chrome, celui que j'ai utilisé le long de la programmation du projet. Ainsi, l'image suivante permet de visualiser et apprécier le travail en cas de problème.
 
-Une première visualisation de la carte géographique avant que l'utilisateur puisse choisir une année à travers la liste déroulante:
+Une première visualisation de la carte géographique avant que l'utilisateur puisse choisir une année à travers la liste déroulante :
 
 ![alt text](/data/img_readme/img_1.PNG "Page d'acceuil")
 
@@ -41,7 +41,8 @@ Le Big Mac Index prend en compte différents pays du globe, ainsi le premier cho
 
 Ensuite, j'ai voulu montrer l'évolution du pouvoir d'achat en ajoutant un élément "burger" (🍔) pour les pays en question. Chaque sandwich, pour chaque année et nation prend une taille différente en rapport à combien de Big Mac on peut effectivement acheter. Le nombre de Big Mac se trouve donc dans la base de données et elle est reprise et visualisée aussi sur la carte géographique à côté de chaque élément 🍔.
 
-L'image represente une partie de la carte pour l'année 2004 en se focalisant sur l'Amérique du Nord et du Sud:
+L'image represente une partie de la carte pour l'année 2004 en se focalisant sur l'Amérique du Nord et du Sud 
+:
 
 ![alt text](/data/img_readme/img_3.png "Focalisation taille")
 
