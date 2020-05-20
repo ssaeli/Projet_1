@@ -3,22 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Big Mac Index and GDP pro capite</title>
+    <title>Richesse d'un pays selon Big Mac Index et PIB par habitant</title>
     <link rel='stylesheet' href='style/normalize.css'>
     <link rel='stylesheet' href='style/main.css'>
     
 </head>
 <body>
-    <h1>Big Mac Index and GDP pro capite</h1>
-    <h2>Évolution de l'index entre 2000 et 2018 pour certains pays</h2>
-    <a href = ''>Sources : </a>
+    <! -- Titre -->
+    <h1 style='text-align:center; margin-bottom: 40px;'>La richesse d'un pays en rapport à son pouvoir d'achat selon le Big Mac Index </h1>
+    <h2 style='text-align:center;'>PIB par habitant (en US$) / Big Mac Index = Quantité de 🍔 par année</h2>
+    
+    <! -- Liste déroulante -->
+    <div id='container' style='text-align:center;' >Select a year between 2000 and 2018 :         
+        <select style='border: 5px solid lightpink; border-radius: 10px;'>
+            <option disabled hidden selected>Select</option>
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+        </select>
+    </div>
+    
+    <h3 style='margin-top: 20px;'></h3>
+</div> 
 
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-   
-   
-    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
-    <script src='script/main.js'></script>
+<! -- Ajout D3 -->
+<script src="https://d3js.org/d3.v5.min.js"></script>
+
+<! -- D3 création carte géographique -->
+<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+<script src='script/main.js'></script>
+
+<! -- Legende -->
+<h3 style="text-align: center; margin-top: 40px; margin-bottom: 10px;"> La taille represente la quantité de Big Mac par année :</h3>
+<center>
+    <div id="tailles">
+        <p id='legende' style="font-size: 2px;">🍔</p>
+        <p id='legende' style="font-size: 3px;">🍔</p>
+        <p id='legende' style="font-size: 4px;">🍔</p>
+        <p id='legende' style="font-size: 6px;">🍔</p>
+        <p id='legende' style="font-size: 8px;">🍔</p>
+        <p id='legende' style="font-size: 10px;">🍔</p>
+        <p id='legende' style="font-size: 12px;">🍔</p>
+        <p id='legende' style="font-size: 14px;">🍔</p>
+        <p id='legende' style="font-size: 16px;">🍔</p>
+        <p id='legende' style="font-size: 20px;">🍔</p>
+        <p id='legende' style="font-size: 25px;">🍔</p>
+        <p id='legende' style="font-size: 30px;">🍔</p>
+        <p id='legende' style="font-size: 35px;">🍔</p>
+        <p id='legende' style="font-size: 40px;">🍔</p>
+        <p id='legende' style="font-size: 45px;">🍔</p>
+        <p id='legende' style="font-size: 50px;">🍔</p>
+    </div>
+</center>
+
+<! -- Ligne de division -->
+<svg height=50px width=1300px>
+    <line x1=100px y1=40px x2=1200px y2=40px style="stroke: lightpink; stroke-width:5; margin-top: 100px" />
+</svg> 
+
+<! -- Liste pays -->
+<h3 style="text-align: center; margin-top: 30px;">Pays prises en compte depuis 2000:</h3>
+<ul id='columns'>
+    <li>Argentina</li>
+    <li>Australia </li>
+    <li>Brazil</li>
+    <li>Britain</li>
+    <li>Canada</li>
+    <li>Chile</li>
+    <li>China</li>
+    <li>Czech Republic</li>
+    <li>Denmark</li>
+    <li>Euro area</li>
+    <li>Hong Kong</li>
+    <li>Hungary</li>
+    <li>Indonesia</li>
+    <li>Israel</li>
+    <li>Japan</li>
+    <li>Malaysia</li>
+    <li>Mexico</li>
+    <li>New Zealand</li>
+    <li>Poland</li>
+    <li>Russia</li>
+    <li>Singapore</li>
+    <li>South Africa</li>
+    <li>South Korea</li>
+    <li>Sweden</li>
+    <li>Switzerland</li>
+    <li>Thailand</li>
+    <li>United States</li>
+</ul>
+
+<! -- Ligne -->
+<svg height="30" width=100%>
+    <line x1="300" y1="10" x2="1000" y2="10" style="stroke: lightpink; stroke-width:5" />
+</svg> 
+
+<! -- Liste pays -->
+<div class='container' style="margin-bottom: 300px;">
+    <div class='left-col'>
+        <h3 >Depuis 2001</h3>
+        <ul>
+            <li>Philippines</li>
+        </ul>
+        
+        <h3 style="padding-top: 36px;">Depuis 2004</h3>
+        <ul>
+            <li >Colombia</li>
+            <li>Costa Rica</li>
+            <li>Pakistan</li>
+            <li>Saudi Arabia</li>
+            <li>Sri Lanka</li>
+            <li>Ukraine</li>
+            <li>Uruguay</li>
+        </ul>        
+    </div>
     
+    <div class='center-col'>
+        <h3>Depuis 2002</h3>
+        <ul>
+            <li>Norway</li>
+            <li>Peru</li>
+            <li>Turkey</li>
+        </ul>
+        
+        <h3>Depuis 2011</h3>
+        <ul>
+            <li>India</li>
+        </ul>
+    </div>
     
+    <div class='right-col'>
+        <h3>Depuis 2003</h3>
+        <ul>
+            <li>Egypt</li>
+        </ul>
+        
+        
+        <h3 style="padding-top: 36px;">Depuis 2014</h3>
+        <ul>
+            <li>Vietnam</li>
+        </ul>
+    </div>
+</div>
+
+<! -- Ligne -->
+<svg height="30" width=100%>
+    <line x1="100" y1="5" x2="1200" y2="5" style="stroke: lightpink; stroke-width:5" />
+</svg>
+
+<! -- Sources -->
+<div style="color: lightpink; text-align: center;">SOURCES : </div>
+<div style="text-align: center;">
+    <ul style='display: inline-block; text-align: left;'>
+        <li><a href = 'https://www.economist.com/news/2020/01/15/the-big-mac-index'>The Economist : The Big Mac Index </a></li>
+        <li><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD">The World Bank : GDP per capita (US$)</a></li>
+    </ul>
+</div>
+
 </body>
 </html>
