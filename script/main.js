@@ -119,12 +119,13 @@ d3.dsv(";", "data/dati.csv", function (d) {
         .enter()
         .append('text')
         .attr('x', (d) => d.coord[0]-10)
-        .attr('y', (d) => d.coord[1]+35)
+        .attr('y', (d) => d.coord[1]+30)
         .text((d) => d.how)
-        .style('fill', 'lightpink')
-        .style('font-size', '20px')
-        .style('font-weight', 'bolder')
-        .style('stroke', 'gray');
+        .style('fill', 'white')
+        .style('font-size', '18px')
+        .style('font-weight', 'bold')
+        .style('stroke', '  #873600  ')
+        .style('stroke-width', '0.5px');
         
     }; 
     
@@ -162,6 +163,6 @@ svg.on('click', function() {
         .append('path')
         .attr('class', 'country')
         .attr('d', (d) => pathGenerator(d))
-        .style('fill', 'navajowhite');
+        .style('fill', ' #f5cba7 ');
         
     };
