@@ -1,99 +1,72 @@
 
+// coordonnées pays à l'écran
 const countries = 
 {'Argentina': [390, 515],
-'Australia':[1134, 460],
+'Australia':[1115, 467],
 'Brazil':[438, 399],
-'Britain':[622, 120],
+'Britain':[610, 120],
 'Canada':[279, 101],
 'Chile':[369, 479],
-'China':[1019, 221],
-'Colombia':[1019, 221],
-'Costa Rica':[309, 310],
-'Czech Republic':[676, 135],  
-'Denmark':[655, 110],
+'China':[995, 200],
+'Colombia':[350, 337],
+'Costa Rica':[310, 310],
+'Czech Republic':[675, 135],  
+'Denmark':[650, 112],
 'Egypt':[738, 235],
 'Euro area':[613, 175],
-'Hong Kong':[1048, 258],
+'Hong Kong':[1040, 260],
 'Hungary':[693, 145],
-'India':[915, 241],
-'Indonesia':[1084, 351],
-'Israel':[756, 209],
-'Japan':[1126, 194],
-'Malaysia':[1016, 334],
+'India':[925, 250],
+'Indonesia':[1088, 360],
+'Israel':[750, 215],
+'Japan':[1100, 180],
+'Malaysia':[1008, 327],
 'Mexico':[254, 254],
-'New Zealand':[1254, 525],
-'Norway':[658, 82],
-'Pakistan':[880, 221],
+'New Zealand':[1222, 545],
+'Norway':[632, 87],
+'Pakistan':[882, 225],
 'Peru':[342, 387],
-'Philippines':[1092, 290],
-'Poland':[698, 116],
+'Philippines':[1108, 317],
+'Poland':[692, 125],
 'Russia':[932, 82],
-'Saudi Arabia':[792, 249],
-'Singapore':[1024, 372],
+'Saudi Arabia':[785, 249],
+'Singapore':[1000, 365],
 'South Africa':[713, 491],
-'South Korea':[1081, 193],
-'Sri Lanka':[931, 319],
-'Sweden':[680, 74],
-'Switzerland':[648, 151],
-'Thailand':[1002, 278],
+'South Korea':[1075, 195],
+'Sri Lanka':[939, 319],
+'Sweden':[670, 80],
+'Switzerland':[640, 148],
+'Thailand':[1012, 285],
 'Turkey':[743, 180],
 'Ukraine':[738, 138],
-'United States':[270, 174],
-'Uruguay':[424, 497],
-'Vietnam': [1035, 295],
+'United States':[260, 185],
+'Uruguay':[428, 500],
+'Vietnam': [1043, 295],
 }
 
+// Paramètres de la visualisation
 const svg = d3
 .select('body')
 .append('svg')
-.attr('width', 1300)
-.attr('height', 610);
+.attr('width', 1270)
+.attr('height', 630)
+.style('background-color', 'black');
 
-
-var years = {
-    2000: [
-        { country: "Argentina", size: 0.30832404 },
-        { country: "Australia", size: 1.59337026 },
-        { country: "Brazil", size: 0.22752740 },
-        { country: "Britain", size: 0.93770386 },
-        { country: "Canada", size: 1.24770761 },
-        { country: "Chile", size: 0.20702376 },
-        { country: "China", size: 0.08023842 },
-        { country: "Czech Republic", size: 0.43232325 },
-        { country: "Denmark", size: 0.99869948 },
-        { country: "Euro area", size: 0.84705003 },
-        { country: "Hong Kong", size: 1.96710206 },
-        { country: "Hungary", size: 0.38058247 },
-        { country: "Indonesia", size: 0.04274904 },
-        { country: "Israel", size: 0.58776881 },
-        { country: "Japan", size: 1.38925045 },
-        { country: "Malaysia", size: 0.33995388 },
-        { country: "Mexico", size: 0.32227289 },
-        { country: "New Zealand", size: 0.80642989 },
-        { country: "Poland", size: 0.35124961 },
-        { country: "Russia", size: 0.12782414 },
-        { country: "Singapore", size: 1.26715487 },
-        { country: "South Africa", size: 0.22642122 },
-        { country: "South Korea", size: 0.44126392 },
-        { country: "Sweden", size: 1.08496519 },
-        { country: "Switzerland", size: 1.09112039 },
-        { country: "Thailand", size: 0.13871633 },
-        { country: "United States", size: 1.44760592 },
-    ],
-};
-
+// Créer l'élément SVG et le configurer
 const mapGroup = svg.append('g');
 const burgerGroup = svg.append('g');
+const textGroup=svg.append('g');
 
-
-
-
+// Importer les données
 d3.dsv(";", "data/dati.csv", function (d) {
     return {
         date: d.Date.substr(6, 11),
         size: d.size,
         country: d.Country,
+        how: parseInt(d.How_many_burgers_pro_capite),
+        
     };
+    
 }).then(function (data) {
     //-----------------
     // organizing data
@@ -108,59 +81,87 @@ d3.dsv(";", "data/dati.csv", function (d) {
             country: d.country, 
             size: d.size,
             coord: countries[d.country],
-        });
+            how : d.how,
+        });     
         
     });
     
-    const year = 2018;
+    // Liste déroulante
+    const selection = document.querySelector('select');
+    const result = document.querySelector('h3');
+    selection.addEventListener('change', ()=> {
+        result.innerText=selection.options[selection.selectedIndex].value;
+    console.log(result.innerText) ;   
+    const year = result.innerText ;
     drawBurger(years[year]);
-    console.log(years)
+    console.log(years);     
+});  
 
+// Visualisation éléments
     function drawBurger(data) {
         burgerGroup.selectAll('text').remove();
-    
+        
         burgerGroup
-          .selectAll('text')
-          .data(data)
-          .enter()
-          .append('text')
-          .attr('x', (d) => d.coord[0]-15)
-          .attr('y', (d) => d.coord[1]+10)
-          .style('font-size', (d) => d.size*20)
-          .text('🍔');
-      };
+        .selectAll('text')
+        .data(data)
+        .enter()
+        .append('text')
+        .attr('x', (d) => d.coord[0]-10)
+        .attr('y', (d) => d.coord[1]+10)
+        .style('font-size', (d) => d.size*30)
+        .text('🍔');
+
+        textGroup.selectAll('text').remove();
+
+        textGroup
+        .selectAll('text')
+        .data(data)
+        .enter()
+        .append('text')
+        .attr('x', (d) => d.coord[0]-10)
+        .attr('y', (d) => d.coord[1]+35)
+        .text((d) => d.how)
+        .style('fill', 'lightpink')
+        .style('font-size', '20px')
+        .style('font-weight', 'bolder')
+        .style('stroke', 'gray');
+        
+    }; 
+    
 });
 
+// Carte géographique
+const projection = d3.geoNaturalEarth1().scale(250).translate([625, 360]);
+const pathGenerator = d3.geoPath().projection(projection);
+
+d3.json('./map.json').then(onDataLoaded);
+
+// Coordonées à l'écran
+svg.on('click', function() {
+    const coords = d3.mouse(this);
+    console.log(
+        Math.round(coords[0]),
+        Math.round(coords[1])
+        );
+    })
+    
+    function onDataLoaded(data) {
+        drawMap(data);
+    }
 
 
+// Visualisation carte géographique
+    function drawMap(data) {
+        const features = data.features;
+        console.log(features)
 
-    
-    const projection = d3.geoNaturalEarth1().scale(250).translate([625, 360]);
-    const pathGenerator = d3.geoPath().projection(projection);
-    
-    d3.json('./map.json').then(onDataLoaded);
-    
-    svg.on('click', function() {
-        const coords = d3.mouse(this);
-        console.log(
-            Math.round(coords[0]),
-            Math.round(coords[1])
-            );
-        })
+        mapGroup
+        .selectAll('path')
+        .data(features)
+        .enter()
+        .append('path')
+        .attr('class', 'country')
+        .attr('d', (d) => pathGenerator(d))
+        .style('fill', 'navajowhite');
         
-        function onDataLoaded(data) {
-            drawMap(data);
-        }
-        
-        
-        function drawMap(data) {
-            const features = data.features;
-            console.log(features)
-            //console.log(features)
-            mapGroup
-            .selectAll('path')
-            .data(features)
-            .enter()
-            .append('path')
-            .attr('d', (d) => pathGenerator(d));
-        };
+    };
