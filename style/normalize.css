@@ -40,6 +40,7 @@ main {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+  color: lightpink;
 }
 
 /* Grouping content
@@ -54,6 +55,7 @@ hr {
   box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
+  
 }
 
 /**
@@ -64,6 +66,7 @@ hr {
 pre {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
+  color: lightpink;
 }
 
 /* Text-level semantics
@@ -75,6 +78,7 @@ pre {
 
 a {
   background-color: transparent;
+  color:white;
 }
 
 /**
@@ -86,6 +90,7 @@ abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
   text-decoration: underline dotted; /* 2 */
+  color: lightpink;
 }
 
 /**
@@ -95,6 +100,7 @@ abbr[title] {
 b,
 strong {
   font-weight: bolder;
+  color: lightpink;
 }
 
 /**
@@ -166,6 +172,7 @@ textarea {
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
+  background-color:white;
 }
 
 /**
