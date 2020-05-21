@@ -52,6 +52,13 @@ h4{
     color: lightpink;
     margin-top: 0px;
     text-decoration: underline;
+    font-size: 20px;
+}
+
+#description {
+font-size: 16px;
+color: white;
+text-decoration: underline;
 }
 
 #legende {

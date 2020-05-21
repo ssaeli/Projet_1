@@ -11,7 +11,7 @@
 <body>
     <! -- Titre -->
     <h1 style='text-align:center; margin-bottom: 40px;'>Richesse d'un pays donnée par le Big Mac Index selon son pouvoir d'achat</h1>
-    <h2 style='text-align:center;'>PIB par habitant (en US$) / Big Mac Index = Quantité de 🍔 par année</h2>
+    <h2 style='text-align:center;'>PIB par habitant (en US$) / Big Mac Index * = Quantité de 🍔 par année</h2>
     
     <! -- Liste déroulante -->
     <div id='container' style='text-align:center;' >Choisir une année entre 2000 et 2018 :         
@@ -50,7 +50,7 @@
 <script src='script/main.js'></script>
 
 <! -- Legende -->
-<h4 style="text-align: center; margin-top: 40px; margin-bottom: 10px;"> La taille represente la quantité de Big Mac par année :</h4>
+<h3 id='description' style="text-align: center; margin-top: 20px; margin-bottom: 10px;"> Les chiffres et la taille représentent la quantité de Big Mac par année :</h3>
 <center>
     <div id="tailles">
         <p id='legende' style="font-size: 2px;">🍔</p>
@@ -72,13 +72,16 @@
     </div>
 </center>
 
+<h4 style=" margin-left:12%; margin-top: 30px; margin-bottom: 10px;">* Big Mac Index :</h4>
+<p style=" margin-left:15%; margin-top: 1px; margin-right: 15%;">Est un indicateur informel qui confronte le pouvoir d'achat des différentes dévises par rapport aux prix de vente d'un burger Big Mac (McDonald's). L'index représente la valeur du prix en US$ de ce burger en tenant en compte le taux de change entre la monnaie du pays en question et le US dollar. Forcément cet indicateur prend la valeur de 1 aux USA.</p>
+
 <! -- Ligne de division -->
-<svg height=50px width=1300px>
-    <line x1=100px y1=40px x2=1200px y2=40px style="stroke: #fadbd8; stroke-width:5; margin-top: 100px" />
+<svg height=50px width=100%>
+    <line x1=10% y1=80% x2=90% y2=80% style="stroke: #fadbd8; stroke-width:5; margin-top: 100px" />
 </svg> 
 
 <! -- Liste pays -->
-<h3 style="text-align: center; margin-top: 30px;">Pays prises en compte depuis 2000:</h3>
+<h3 style="text-align: center; margin-top: 30px;">Pays pris en compte depuis 2000:</h3>
 <ul id='columns'>
     <li>Argentina</li>
     <li>Australia </li>
@@ -110,8 +113,8 @@
 </ul>
 
 <! -- Ligne -->
-<svg height="30" width=100%>
-    <line x1="300" y1="10" x2="1000" y2="10" style="stroke: #fadbd8; stroke-width:5" />
+<svg height="30px" width=100%>
+    <line x1="20%" y1="10" x2="80%" y2="10" style="stroke: #fadbd8; stroke-width:5" />
 </svg> 
 
 <! -- Liste pays -->
@@ -162,9 +165,9 @@
     </div>
 </div>
 
-<! -- Ligne -->
-<svg height="30" width=100%>
-    <line x1="100" y1="5" x2="1200" y2="5" style="stroke: #fadbd8; stroke-width:5" />
+<! -- Ligne de division -->
+<svg height=50px width=100%>
+    <line x1=10% y1=25% x2=90% y2=25% style="stroke: #fadbd8; stroke-width:5; margin-top: 100px" />
 </svg>
 
 <! -- Sources -->
