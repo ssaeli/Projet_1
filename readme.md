@@ -10,6 +10,8 @@ Les pays prises en compte sont ceux qui se trouvent dans le Big Mac Index (une b
 
 Lien vers page GitHub des codes: https://github.com/ssaeli/Projet_1
 
+Lien vers la page web pour la visualisation du projet : https://ssaeli.github.io/Projet_1/
+
  *Attention* : l'ouverture du projet à travers le browser Firefox ne permet pas de visualiser les éléments correctement, c'est aussi possible qu'autres browsers ne sont pas aptes à visualiser convenablement le projet en tant que tel.
  
  Pour une visualisation acceptable il sera bien d’ouvrir le projet avec Google Chrome.
@@ -18,7 +20,7 @@ Lien vers page GitHub des codes: https://github.com/ssaeli/Projet_1
 
 Une première visualisation de la carte géographique avant que l'utilisateur puisse choisir une année à travers la liste déroulante :
 
-![alt text](/data/img_readme/img_1.PNG "Page d'acceuil")
+![alt text](/data/img_readme/img_1.png "Page d'acceuil")
 
 ## Variables retenues
 
@@ -53,6 +55,14 @@ L'image représente une partie de la carte pour l'année 2004 en se focalisant s
 On voit en effet qu'au Canada, avec le PIB par habitant et le Big Mac Index de la période en question, les citoyens pouvaient acheter 13'757 Big Mac. Au Brésil, par contre, on pouvait acheter que 2'142 Big Mac.
 <br> 
 En conclusion, on peut affirmer, grâce à cette représentation, que le Canada est plus riche du Brésil en 2004 selon cette comparaison faite au travers le Big Mac Index.
+
+Le projet comprend aussi une légende, dans laquelle on trouve ce que représente la taille d’un image du Big Mac ainsi qu’une brève explication de qu’est-ce que le Big Mac Index pour permettre à l’utilisateur de comprendre le contexte.
+
+Ensuite, j’ai décidé d’ajouter une liste des pays inclus dans le travail à partir de l’année 2000. Plus précisément il y a des années où des nations ont été rajoutées et prises en compte dans le Big Mac Index, c’est pour cette raison que dans la liste on trouve aussi les différentes années suivant le 2000 où lesdites nations ont été rajoutées dans mes données ainsi que sur la carte géographique du projet.
+
+Une capture d'écran pour montrer la légende et la liste des pays : 
+
+![alt text](/data/img_readme/img_4.png "Légende")
 
 ## Apports de la visualisation
 
