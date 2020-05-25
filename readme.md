@@ -20,7 +20,7 @@ Lien vers la page web pour la visualisation du projet : https://ssaeli.github.io
 
 Une première visualisation de la carte géographique avant que l'utilisateur puisse choisir une année à travers la liste déroulante :
 
-![alt text](/data/img_readme/img_1.png "Page d'acceuil")
+![alt text](/data/img_readme/img_1.png "Page d'accueil")
 
 ## Variables retenues
 
